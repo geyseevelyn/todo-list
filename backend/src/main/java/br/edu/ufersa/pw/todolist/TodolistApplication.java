@@ -32,7 +32,7 @@ public class TodolistApplication {
 	CommandLineRunner runner() {
 		return args -> {
 			 List<User> users = userRepo.findAll();
-		 users.forEach(user -> System.out.println(user.getEmail()));
+			 users.forEach(user -> System.out.println(user.getEmail()));
 		};
 	}
 }
