@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "task": "Estudar",
+        "complete": true
+    },
+    {
+        "id": 2,
+        "task": "Trabalhar",
+        "complete": true
+    },
+    {
+        "id": 3,
+        "task": "Café",
+        "complete": false
+    },
+    {
+        "id": 4,
+        "task": "Terapia",
+        "complete": true
+    },
+    {
+        "id": 5,
+        "task": "Programar",
+        "complete": false
+    },
+    {
+        "id": 6,
+        "task": "Remédios",
+        "complete": false
+    }
+]
