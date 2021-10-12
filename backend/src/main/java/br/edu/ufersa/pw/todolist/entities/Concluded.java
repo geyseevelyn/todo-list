@@ -1,4 +1,4 @@
-package br.edu.ufersa.pw.todolist.entity;
+package br.edu.ufersa.pw.todolist.entities;
 
 import java.time.LocalDate;
 
@@ -11,17 +11,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_todo")
-public class Todo {
-
+@Table(name="tb_concluded")
+public class Concluded {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
+	private String todo;
 	@ManyToOne
 	@JoinColumn(name="id_user")
 	private User user;
-	private String todo;
-	private LocalDate deadline;
+	private LocalDate completedIn;
 	
 	public Long getId() {
 		return id;
@@ -29,22 +29,22 @@ public class Todo {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
 	public String getTodo() {
 		return todo;
 	}
 	public void setTodo(String todo) {
 		this.todo = todo;
 	}
-	public LocalDate getDeadline() {
-		return deadline;
+	public User getUser() {
+		return user;
 	}
-	public void setDeadline(LocalDate deadline) {
-		this.deadline = deadline;
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public LocalDate getCompletedIn() {
+		return completedIn;
+	}
+	public void setCompletedIn(LocalDate completedIn) {
+		this.completedIn = completedIn;
 	}
 }

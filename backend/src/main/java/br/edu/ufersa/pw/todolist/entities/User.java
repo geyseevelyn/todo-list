@@ -1,4 +1,4 @@
-package br.edu.ufersa.pw.todolist.entity;
+package br.edu.ufersa.pw.todolist.entities;
 
 import java.util.ArrayList;
 import java.util.List;

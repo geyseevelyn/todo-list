@@ -12,9 +12,7 @@ function App() {
 
   const handleToggle = (id) => {
     let mapped = toDoList.map(task => {
-
       return task.id === id ? { ...task, complete: !task.complete } : { ...task };
-
     });
     setToDoList(mapped);
   }
@@ -38,8 +36,8 @@ function App() {
     <div className="App">
       <Header />
       <ToDoList toDoList={toDoList} handleToggle={handleToggle} />
-      <button className="btn-delete" onClick={handleFilter}>Deletar tarefas concluídas</button>
       <ToDoInput addTask={addTask} />
+      <button className="btn-delete" onClick={handleFilter}>Deletar tarefas concluídas</button>
     </div>
   );
 };
