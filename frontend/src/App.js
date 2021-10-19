@@ -18,7 +18,7 @@ function App() {
   }
 
   //mostra as tarefas não completadas 
-  const handleFilter  = () => {
+  const handleFilter = () => {
     let filtered = toDoList.filter(task => {
       return !task.complete;
     });
@@ -31,13 +31,17 @@ function App() {
     add = [...add, { id: toDoList.length + 1, task: userInput, complete: false }];
     setToDoList(add);
   }
-  
+
   return (
     <div className="App">
       <Header />
-      <ToDoList toDoList={toDoList} handleToggle={handleToggle} />
-      <ToDoInput addTask={addTask} />
-      <button className="btn-delete" onClick={handleFilter}>Deletar tarefas concluídas</button>
+      <main className="content">
+        <ToDoList toDoList={toDoList} handleToggle={handleToggle} />
+      </main>
+      <section>
+        <ToDoInput addTask={addTask} />
+        <button className="btn-delete" onClick={handleFilter}>Deletar tarefas concluídas</button>
+      </section>
     </div>
   );
 };
