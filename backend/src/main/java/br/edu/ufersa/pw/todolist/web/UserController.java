@@ -18,7 +18,7 @@ import br.edu.ufersa.pw.todolist.repositories.UserRepository;
 import br.edu.ufersa.pw.todolist.services.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
 	
 	@Autowired
