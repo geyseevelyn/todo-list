@@ -26,8 +26,8 @@ public class ConcludedService {
 	}
 	
 	@Transactional(propagation=Propagation.REQUIRED, readOnly=false)
-	public List<TodoDto> findByUserAndDeadline(String email, LocalDate deadline){
-		List<Concluded> todos = repo.findByUserAndDeadline(email, deadline);
+	public List<TodoDto> findByUserAndConcluded(String email, LocalDate concluded){
+		List<Concluded> todos = repo.findByUserAndConcluded(email, concluded);
 		return todos.stream().map(x -> new TodoDto(x)).collect(Collectors.toList());
 	}
 }

@@ -24,5 +24,5 @@ public interface ConcludedRepository extends JpaRepository<Concluded,Long>{
 					+ "INNER JOIN tb_users user ON user.id=t.id_user AND user.email= :email "
 					+ "AND t.completed_in= :concluded",
 					nativeQuery = true)
-	List<Concluded> findByUserAndDeadline(String email, LocalDate concluded);
+	List<Concluded> findByUserAndConcluded(String email, LocalDate concluded);
 }
