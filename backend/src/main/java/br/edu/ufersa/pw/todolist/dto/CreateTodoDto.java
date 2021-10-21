@@ -9,7 +9,7 @@ public class CreateTodoDto {
 	
 	private Long id;
 	private String todo;
-	private LocalDate data;
+	private LocalDate deadline;
 	private String email;
 	
 	public CreateTodoDto() {}
@@ -17,13 +17,13 @@ public class CreateTodoDto {
 	public CreateTodoDto(Todo todo) {
 		setId(todo.getId());
 		setTodo(todo.getTodo());
-		setData(todo.getDeadline());
+		setDeadline(todo.getDeadline());
 	}
 	
 	public CreateTodoDto(Concluded todo) {
 		setId(todo.getId());
 		setTodo(todo.getTodo());
-		setData(todo.getCompletedIn());
+		setDeadline(todo.getCompletedIn());
 	}
 	
 	public Long getId() {
@@ -38,11 +38,11 @@ public class CreateTodoDto {
 	public void setTodo(String todo) {
 		this.todo = todo;
 	}
-	public LocalDate getData() {
-		return data;
+	public LocalDate getDeadline() {
+		return deadline;
 	}
-	public void setData(LocalDate data) {
-		this.data = data;
+	public void setDeadline(LocalDate data) {
+		this.deadline = data;
 	}
 	public String getEmail() {
 		return email;
