@@ -46,14 +46,14 @@ public class TodoService {
 	public CreateTodoDto save(CreateTodoDto dto) {
 		Todo todo = new Todo();
 		todo.setTodo(dto.getTodo());
-		todo.setDeadline(dto.getData());
+		todo.setDeadline(dto.getDeadline());
 		todo.setUser(userRepo.findByEmail(dto.getEmail()));
 		todo = repo.save(todo);
 		
 		CreateTodoDto retorno = new CreateTodoDto();
 		retorno.setId(todo.getId());
 		retorno.setTodo(todo.getTodo());
-		retorno.setData(todo.getDeadline());
+		retorno.setDeadline(todo.getDeadline());
 		retorno.setEmail(dto.getEmail());
 		
 		return retorno;
@@ -63,7 +63,7 @@ public class TodoService {
 	public CreateTodoDto update(CreateTodoDto dto) {
 		Todo todo = new Todo();
 		todo.setTodo(dto.getTodo());
-		todo.setDeadline(dto.getData());
+		todo.setDeadline(dto.getDeadline());
 		todo.setUser(userRepo.findByEmail(dto.getEmail()));
 		todo.setId(dto.getId());
 		todo = repo.save(todo);
@@ -71,7 +71,7 @@ public class TodoService {
 		CreateTodoDto retorno = new CreateTodoDto();
 		retorno.setId(todo.getId());
 		retorno.setTodo(todo.getTodo());
-		retorno.setData(todo.getDeadline());
+		retorno.setDeadline(todo.getDeadline());
 		retorno.setEmail(dto.getEmail());
 		
 		return retorno;
